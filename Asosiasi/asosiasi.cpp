@@ -51,3 +51,12 @@ void pasien::cetakDokter() {
 void dokter::tambahPasien(pasien* pPasien) {
     daftar_pasien.push_back(pPasien);
 }
+
+void dokter::cetakPasien() {
+    cout << "Daftar fokter yang menangani pasien \"" << this->nama << "\":\n";
+    //auto digunakan dalam perulangan
+    for (auto& a : daftar_pasien) {
+        cout << a->nama << "\n";
+    }
+    cout << endl;
+}
